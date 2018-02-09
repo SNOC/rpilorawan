@@ -12,29 +12,29 @@ This python script allows :
 - sending data with or without requesting a response
 
 # Usage
-## reading preprogrammed EUI
+* reading preprogrammed EUI
 ```bash
 python sendlorawan.py --eui
 ```
 
-## joining an OTAA Lora network providing devEUI (0004A30B001EBA62) appEUI (0000000000000001) and appKey (4E2086153FB762C2E079A1F791792400) and sending frame 0A1B
+* joining an OTAA Lora network providing devEUI (0004A30B001EBA62) appEUI (0000000000000001) and appKey (4E2086153FB762C2E079A1F791792400) and sending frame 0A1B
 ```bash
 python sendlorawan.py --otaa 0004A30B001EBA62 0000000000000001 4E2086153FB762C2E079A1F791792400 --send 0A1B
 ```
 
-## joining an OTAA Lora network providing devEUI (0004A30B001EBA62) appEUI (0000000000000001) and appKey (4E2086153FB762C2E079A1F791792400) and sending frames A4B5 and then FCD45E0C expecting a downlink frame
+* joining an OTAA Lora network providing devEUI (0004A30B001EBA62) appEUI (0000000000000001) and appKey (4E2086153FB762C2E079A1F791792400) and sending frames A4B5 and then FCD45E0C expecting a downlink frame
 ```bash
 python sendlorawan.py --otaa 0004A30B001EBA62 0000000000000001 4E2086153FB762C2E079A1F791792400
 python sendlorawan.py --send A4B5
 python sendlorawan.py --send FCD45E0C --receive
 ```
 
-## joining an ABP Lora network providing NwkSkey () AppSKey () and devAddr () and sending frame AB50
+* joining an ABP Lora network providing NwkSkey () AppSKey () and devAddr () and sending frame AB50
 ```bash
 python sendlorawan.py --abp    --send AB50
 ```
 
-## Notes
+* Notes
 Short arguments are supported (ie -p for --port)
 The serial port path can be specified with option ```--port```, default is ```/dev/ttyAMA0```
 The Lora channel can be specified when sending with option ```--channel```, default is ```1```
